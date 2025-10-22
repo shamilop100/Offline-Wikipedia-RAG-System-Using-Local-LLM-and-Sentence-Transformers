@@ -1,0 +1,12 @@
+datasets
+transformers
+sentence-transformers
+chromadb
+faiss-cpu
+numpy
+tqdm
+requests
+ollama                # optional: python client for Ollama
+
+
+python-dotenv         # optional: secrets/config
