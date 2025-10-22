@@ -1,0 +1,24 @@
+# Python venv and cache
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large model/data files
+*.bin
+*.pt
+*.pth
+*.h5
+*.dll
+
+# Logs and outputs
+logs/
+*.log
