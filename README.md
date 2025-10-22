@@ -69,9 +69,22 @@ Perfect for privacy-sensitive applications, air-gapped environments, or anyone w
 ## 🏗️ Architecture
 
 ```mermaid
-
- graph LR A[User Query] --> B[Sentence Transformer] B --> C[ChromaDB Vector Search] C --> D[Top-K Context Retrieval] D --> E[Prompt Construction] E --> F[Phi-3 via Ollama] F --> G[Generated Answer] H[Wikipedia API] --> I[Text Processing] I --> J[Embedding Generation] J --> C style A fill:#e1f5ff style G fill:#c8e6c9 style F fill:#fff9c4 style C fill:#f3e5f5
-
+graph LR
+    A[User Query] --> B[Sentence Transformer]
+    B --> C[ChromaDB Vector Search]
+    C --> D[Top-K Context Retrieval]
+    D --> E[Prompt Construction]
+    E --> F[Phi-3 via Ollama]
+    F --> G[Generated Answer]
+    
+    H[Wikipedia API] --> I[Text Processing]
+    I --> J[Embedding Generation]
+    J --> C
+    
+    style A fill:#e1f5ff
+    style G fill:#c8e6c9
+    style F fill:#fff9c4
+    style C fill:#f3e5f5
 ```
 
 ### 📊 System Workflow
