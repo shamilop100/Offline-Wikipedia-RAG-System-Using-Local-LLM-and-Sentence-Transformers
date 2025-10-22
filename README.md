@@ -385,17 +385,21 @@ model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2")
 
 ---
 
-## 📊 Performance Benchmarks
+## 🖥️ Tested on
 
-Tested on: Intel i7-12700K, 32GB RAM, Windows 11
+**Laptop:** ASUS Vivobook M6500IH  
+**CPU:** AMD Ryzen (Family 23, Model 96) ~2.9 GHz  
+**RAM:** 16 GB (15.8 GB usable)  
+**OS:** Windows 11 Home (Build 26200, x64)  
 
-| Operation | Time | Notes |
-|-----------|------|-------|
-| **Index Creation** (5 articles) | ~15s | One-time setup |
-| **Query Embedding** | ~50ms | Per query |
-| **Context Retrieval** | ~100ms | ChromaDB HNSW search |
-| **Answer Generation** | 2-5s | Phi-3 local inference |
-| **Total Query Time** | ~3-6s | End-to-end |
+| Operation               | Time        | Notes                           |
+|-------------------------|------------|---------------------------------|
+| Index Creation (5 articles) | ~15s       | One-time setup                  |
+| Query Embedding         | ~50ms      | Per query                        |
+| Context Retrieval       | ~100ms     | ChromaDB HNSW search            |
+| Answer Generation       | 2-5s       | Phi-3 local inference via Ollama|
+| **Total Query Time**    | ~3-6s      | End-to-end                       |
+
 
 ### Optimization Tips
 
