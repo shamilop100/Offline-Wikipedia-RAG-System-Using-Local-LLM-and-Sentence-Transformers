@@ -66,8 +66,8 @@ Perfect for privacy-sensitive applications, air-gapped environments, or anyone w
 
 ---
 
-## 🏗️ Architecture
 
+    
 graph LR
     %% User query flow
     A[User Query] --> B[Sentence Transformer Embedding]
@@ -88,6 +88,7 @@ graph LR
     style F fill:#fff9c4,stroke:#f9a825,stroke-width:2px
     style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
     style H fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+
 
 ```
 
