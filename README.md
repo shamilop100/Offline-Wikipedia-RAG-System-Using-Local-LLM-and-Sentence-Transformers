@@ -71,22 +71,22 @@ Perfect for privacy-sensitive applications, air-gapped environments, or anyone w
 ```mermaid
 graph LR
     %% User query flow
-    A[User Query / Streamlit UI] --> B[Query Embedding with SentenceTransformer]
-    B --> C[ChromaDB Retriever / FAISS Alternative]
-    C --> D[Top-K Context Retrieval]
-    D --> E[Prompt Construction with Retrieved Context]
-    E --> F[Ollama Local LLM (Phi-3)]
-    F --> G[Generated Answer]
-    G --> H[Display in Streamlit UI]
+    A["User Query / Streamlit UI"] --> B["Query Embedding with SentenceTransformer"]
+    B --> C["ChromaDB Retriever / FAISS Alternative"]
+    C --> D["Top-K Context Retrieval"]
+    D --> E["Prompt Construction with Retrieved Context"]
+    E --> F["Ollama Local LLM (Phi-3)"]
+    F --> G["Generated Answer"]
+    G --> H["Display in Streamlit UI"]
 
     %% Dataset flow
-    I[Hugging Face rag-mini-wikipedia: text-corpus split] --> J[Text Preprocessing & Chunking]
-    J --> K[Embedding Generation with SentenceTransformer]
+    I["Hugging Face rag-mini-wikipedia: text-corpus split"] --> J["Text Preprocessing & Chunking"]
+    J --> K["Embedding Generation with SentenceTransformer"]
     K --> C
 
     %% Evaluation flow
-    L[rag-mini-wikipedia: question-answer split] --> M[Evaluate: EM / F1 Score]
-    M --> N[Metrics Logging / Display]
+    L["rag-mini-wikipedia: question-answer split"] --> M["Evaluate: EM / F1 Score"]
+    M --> N["Metrics Logging / Display"]
 
     %% Styling
     style A fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
@@ -95,6 +95,7 @@ graph LR
     style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
     style I fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
     style L fill:#fbe9e7,stroke:#d84315,stroke-width:2px
+
 
 ```
 
