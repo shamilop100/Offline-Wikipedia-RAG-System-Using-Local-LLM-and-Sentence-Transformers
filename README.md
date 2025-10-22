@@ -571,16 +571,9 @@ Special thanks to the open-source AI community for making projects like this pos
 
 ---
 
-## 📈 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/shamilop100/Offline-Wikipedia-RAG-System?style=social)
-![GitHub forks](https://img.shields.io/github/forks/shamilop100/Offline-Wikipedia-RAG-System?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/shamilop100/Offline-Wikipedia-RAG-System?style=social)
-![GitHub issues](https://img.shields.io/github/issues/shamilop100/Offline-Wikipedia-RAG-System)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/shamilop100/Offline-Wikipedia-RAG-System)
-![GitHub last commit](https://img.shields.io/github/last-commit/shamilop100/Offline-Wikipedia-RAG-System)
 
----
+
 
 ## 🌟 Citation
 
