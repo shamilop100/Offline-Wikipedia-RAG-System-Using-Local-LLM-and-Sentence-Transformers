@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Ollama-Phi--3-green?logo=ollama&logoColor=white" />
-  <img src="https://img.shields.io/badge/Sentence--Transformers-MPNet-orange?logo=huggingface&logoColor=white" />
+  <img src="https://img.shields.io/badge/Sentence--Transformers-all--MiniLM--L6--v2-orange?logo=huggingface&logoColor=white" />
   <img src="https://img.shields.io/badge/ChromaDB-Vector%20Store-purple?logo=database&logoColor=white" />
   <img src="https://img.shields.io/badge/License-MIT-lightgrey?logo=opensourceinitiative&logoColor=white" />
   <img src="https://img.shields.io/badge/Platform-VS%20Code-blueviolet?logo=visualstudiocode&logoColor=white" />
