@@ -88,13 +88,24 @@ graph LR
     L["rag-mini-wikipedia: question-answer split"] --> M["Evaluate: EM / F1 Score"]
     M --> N["Metrics Logging / Display"]
 
-    %% Styling
-    style A fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
-    style G fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
-    style F fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    style I fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
-    style L fill:#fbe9e7,stroke:#d84315,stroke-width:2px
+    %% Styling for contrast
+    style A fill:#2e7d32,stroke:#000000,stroke-width:2px,color:#ffffff
+    style I fill:#6a1b9a,stroke:#000000,stroke-width:2px,color:#ffffff
+    style L fill:#d84315,stroke:#000000,stroke-width:2px,color:#ffffff
+    style C fill:#1a237e,stroke:#000000,stroke-width:2px,color:#ffffff
+    style F fill:#f9a825,stroke:#000000,stroke-width:2px,color:#000000
+    style G fill:#4e342e,stroke:#000000,stroke-width:2px,color:#ffffff
+
+    %% Other nodes default styling
+    style B fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style E fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style H fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    style J fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    style K fill:#b2dfdb,stroke:#00796b,stroke-width:2px
+    style M fill:#fbe9e7,stroke:#d84315,stroke-width:2px
+    style N fill:#e0e0e0,stroke:#616161,stroke-width:2px
+
 
 
 ```
