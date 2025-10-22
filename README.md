@@ -70,21 +70,33 @@ Perfect for privacy-sensitive applications, air-gapped environments, or anyone w
 
 ```mermaid
 graph LR
-    A[User Query] --> B[Sentence Transformer]
-    B --> C[ChromaDB Vector Search]
-    C --> D[Top-K Context Retrieval]
-    D --> E[Prompt Construction]
-    E --> F[Phi-3 via Ollama]
+    %% User query flow
+    A[User Query / Input in Streamlit UI] --> B[Query Embedding with SentenceTransformer]
+    B --> C{Retriever}
+    C -->|ChromaDB| D[Top-K Context Retrieval]
+    C -->|FAISS (Alternative)| D
+    D --> E[Prompt Construction with Retrieved Context]
+    E --> F[Ollama Local LLM (Phi-3)]
     F --> G[Generated Answer]
+    G --> H[Display in Streamlit UI]
+
+    %% Dataset flow
+    I[Hugging Face rag-mini-wikipedia: text-corpus split] --> J[Text Preprocessing / Chunking]
+    J --> K[Embedding Generation with SentenceTransformer]
+    K --> C
+
+    %% Evaluation flow
+    L[rag-mini-wikipedia: question-answer split] --> M[Evaluation: EM/F1 Score]
+    M --> N[Metrics Logging / Display]
     
-    H[Wikipedia API] --> I[Text Processing]
-    I --> J[Embedding Generation]
-    J --> C
-    
-    style A fill:#e1f5ff
-    style G fill:#c8e6c9
-    style F fill:#fff9c4
-    style C fill:#f3e5f5
+    %% Styling
+    style A fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
+    style G fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    style F fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style I fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
+    style L fill:#fbe9e7,stroke:#d84315,stroke-width:2px
+
 ```
 
 ### 📊 System Workflow
