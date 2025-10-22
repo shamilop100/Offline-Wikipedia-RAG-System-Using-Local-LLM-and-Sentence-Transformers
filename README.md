@@ -69,42 +69,42 @@ Perfect for privacy-sensitive applications, air-gapped environments, or anyone w
 ## 🏗️ Architecture
 
 ```mermaid
+%% Professional RAG Pipeline Flow
 graph LR
-    %% User query flow
-    A["User Query / Streamlit UI"] --> B["Query Embedding with SentenceTransformer"]
-    B --> C["ChromaDB Retriever / FAISS Alternative"]
-    C --> D["Top-K Context Retrieval"]
-    D --> E["Prompt Construction with Retrieved Context"]
-    E --> F["Ollama Local LLM (Phi-3)"]
-    F --> G["Generated Answer"]
-    G --> H["Display in Streamlit UI"]
+    %% User Query Flow
+    A["💬 User Query / Streamlit UI"] --> B["🔹 Query Embedding\n(SentenceTransformer)"]
+    B --> C["📦 Retriever\n(ChromaDB / FAISS Alternative)"]
+    C --> D["📄 Top-K Context Retrieval"]
+    D --> E["📝 Prompt Construction"]
+    E --> F["🤖 Ollama Local LLM (Phi-3)"]
+    F --> G["✅ Generated Answer"]
+    G --> H["🖥️ Display in Streamlit UI"]
 
-    %% Dataset flow
-    I["Hugging Face rag-mini-wikipedia: text-corpus split"] --> J["Text Preprocessing & Chunking"]
-    J --> K["Embedding Generation with SentenceTransformer"]
+    %% Dataset Flow
+    I["📚 Hugging Face rag-mini-wikipedia: text-corpus split"] --> J["🧹 Text Preprocessing & Chunking"]
+    J --> K["🔹 Embedding Generation\n(SentenceTransformer)"]
     K --> C
 
-    %% Evaluation flow
-    L["rag-mini-wikipedia: question-answer split"] --> M["Evaluate: EM / F1 Score"]
-    M --> N["Metrics Logging / Display"]
+    %% Evaluation Flow
+    L["🎯 rag-mini-wikipedia: question-answer split"] --> M["📊 Evaluate: EM / F1 Score"]
+    M --> N["📈 Metrics Logging / Display"]
 
-    %% Styling for contrast
-    style A fill:#2e7d32,stroke:#000000,stroke-width:2px,color:#ffffff
-    style I fill:#6a1b9a,stroke:#000000,stroke-width:2px,color:#ffffff
-    style L fill:#d84315,stroke:#000000,stroke-width:2px,color:#ffffff
-    style C fill:#1a237e,stroke:#000000,stroke-width:2px,color:#ffffff
-    style F fill:#f9a825,stroke:#000000,stroke-width:2px,color:#000000
-    style G fill:#4e342e,stroke:#000000,stroke-width:2px,color:#ffffff
+    %% Node Styling
+    style A fill:#2E7D32,stroke:#000,color:#fff,stroke-width:2px,rx:10,ry:10
+    style B fill:#42A5F5,stroke:#1565C0,color:#fff,stroke-width:2px,rx:10,ry:10
+    style C fill:#1A237E,stroke:#0D1033,color:#fff,stroke-width:2px,rx:10,ry:10
+    style D fill:#7E57C2,stroke:#4A148C,color:#fff,stroke-width:2px,rx:10,ry:10
+    style E fill:#FFCA28,stroke:#FF8F00,color:#000,stroke-width:2px,rx:10,ry:10
+    style F fill:#F9A825,stroke:#F57F17,color:#000,stroke-width:2px,rx:10,ry:10
+    style G fill:#4E342E,stroke:#3E2723,color:#fff,stroke-width:2px,rx:10,ry:10
+    style H fill:#26A69A,stroke:#00695C,color:#fff,stroke-width:2px,rx:10,ry:10
+    style I fill:#6A1B9A,stroke:#4A148C,color:#fff,stroke-width:2px,rx:10,ry:10
+    style J fill:#AB47BC,stroke:#6A1B9A,color:#fff,stroke-width:2px,rx:10,ry:10
+    style K fill:#26C6DA,stroke:#00838F,color:#000,stroke-width:2px,rx:10,ry:10
+    style L fill:#D84315,stroke:#BF360C,color:#fff,stroke-width:2px,rx:10,ry:10
+    style M fill:#FF7043,stroke:#D84315,color:#fff,stroke-width:2px,rx:10,ry:10
+    style N fill:#B0BEC5,stroke:#607D8B,color:#000,stroke-width:2px,rx:10,ry:10
 
-    %% Other nodes default styling
-    style B fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
-    style D fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    style E fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style H fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
-    style J fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px
-    style K fill:#b2dfdb,stroke:#00796b,stroke-width:2px
-    style M fill:#fbe9e7,stroke:#d84315,stroke-width:2px
-    style N fill:#e0e0e0,stroke:#616161,stroke-width:2px
 
 
 
